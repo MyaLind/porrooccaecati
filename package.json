@@ -1,0 +1,110 @@
+{
+  "name": "porrooccaecati",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.10.5",
+  "description": "JavaScript SDK to interact with Crossbell",
+  "keywords": [
+    "crossbell",
+    "unde",
+    "nisi",
+    "web3"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MyaLind/porrooccaecati.git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MyaLind/porrooccaecati.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./contract": {
+      "types": "./dist/contract/index.d.ts",
+      "require": "./dist/contract/index.js",
+      "import": "./dist/contract/index.mjs"
+    },
+    "./indexer": {
+      "types": "./dist/indexer/index.d.ts",
+      "require": "./dist/indexer/index.js",
+      "import": "./dist/indexer/index.mjs"
+    },
+    "./ipfs": {
+      "types": "./dist/ipfs/index.d.ts",
+      "require": "./dist/ipfs/index.js",
+      "import": "./dist/ipfs/index.mjs"
+    },
+    "./network": {
+      "types": "./dist/network/index.d.ts",
+      "require": "./dist/network/index.js",
+      "import": "./dist/network/index.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "require": "./dist/utils/index.js",
+      "import": "./dist/utils/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "typesVersions": {
+    "*": {
+      "contract": [
+        "./dist/contract/index.d.ts"
+      ],
+      "indexer": [
+        "./dist/indexer/index.d.ts"
+      ],
+      "ipfs": [
+        "./dist/ipfs/index.d.ts"
+      ],
+      "network": [
+        "./dist/network/index.d.ts"
+      ],
+      "utils": [
+        "./dist/utils/index.d.ts"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@crossbell/ipfs-fetch": "^0.0.21",
+    "async-cache-dedupe": "^2.0.0",
+    "async-retry": "^1.3.3",
+    "eip1193-types": "^0.2.1",
+    "exponential-backoff": "^3.1.1",
+    "p-limit": "^3.1.0",
+    "viem": "^2.0.0-beta.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.3.3",
+    "@types/async-retry": "^1.4.8",
+    "@types/node": "^20.9.2",
+    "abitype": "^0.10.2",
+    "bumpp": "^9.2.0",
+    "change-case": "^5.2.0",
+    "simple-git-hooks": "^2.9.0",
+    "tsup": "^8.0.0",
+    "typedoc": "^0.25.3",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  },
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run format && npm run lint:fix"
+  },
+  "author": "AdrianaGottlieb"
+}
